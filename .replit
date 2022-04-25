@@ -1,0 +1,2 @@
+compile = "javac -classpath ./* -d . $(find . -type f -name '*.java')"
+run = ["java", "-classpath", "./", "Main"]
