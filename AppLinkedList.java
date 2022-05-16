@@ -1,3 +1,5 @@
+package linkedlist;
+
 import java.util.Scanner;
 
 public class AppLinkedList {
@@ -5,6 +7,7 @@ public class AppLinkedList {
         Scanner sc = new Scanner(System.in);
         cBarang b1 = new cBarang("tas", 500000);
         cBarang b2 = new cBarang("sepatu", 155000);
+        cBarang b3 = new cBarang("sandal", 800000);
         // cSimpul
         cLinkedList ll = new cLinkedList();
 
@@ -36,5 +39,6 @@ public class AppLinkedList {
                     break;
             }
         } while (pilih != 4);
+        sc.close();
     }
 }

@@ -1,5 +1,7 @@
+package linkedlist;
+
 public class Main {
     public static void main(String[] args) {
-    test.main(null);
+        test.main(null);
     }
 }
