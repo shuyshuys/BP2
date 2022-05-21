@@ -15,6 +15,7 @@ public class cLinkedList {
             head = baru; // update posisi ujung linked list
         }
         System.out.println("Penambahan sukses!");
+        System.out.println();
     }
 
     public void lihatLinkedList() {
@@ -30,7 +31,7 @@ public class cLinkedList {
             System.out.println("Linked list kosong");
         } else if (head.next == null) {
             head = tail = null;
-        } else { // berisi 2 impul
+        } else { // linkedlist berisi minimal 2 simpul
             cSimpul t = head;
             System.out.println("[" + t.getData() + "] dihapus");
 
