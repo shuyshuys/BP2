@@ -1,4 +1,7 @@
+package BP2;
+
 public class cLinkedList {
+    // single linked list
     cSimpul head, tail;
     int jumlah; // menyimpan jumlah simpul di linked list
 
@@ -6,18 +9,20 @@ public class cLinkedList {
         if (head == null) {
             head = baru;
             tail = baru;
-        } else {
-            baru.next = head;
-            head = baru;
+            // head=tail=baru3
+        } else { // head bukan null, linked list sudah berisi
+            baru.next = head; // sambungkan dulu link nya
+            head = baru; // update posisi ujung linked list
         }
         System.out.println("Penambahan sukses!");
     }
 
     public void lihatLinkedList() {
         System.out.print("Isi Linked List: ");
-        for (cSimpul ) {
-System.out.print(tt.getData());
-}
+        for (cSimpul t = head; t != null; t = t.next) {
+            System.out.print("[" + t.getData() + "]");
+        }
+        System.out.println();
     }
 
     public void hapusDepan() {
