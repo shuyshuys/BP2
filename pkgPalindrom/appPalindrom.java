@@ -21,41 +21,53 @@ public class appPalindrom {
                     cekPalindrom();
                     break;
                 case 2:
-                    System.out.println("Terima kasih");
+                    border();
+                    System.out.println("Terima Kasih Telah Menggunakan Program ini!");
+                    border();
                     System.exit(0);
                 default:
+                    border();
                     System.out.println("Pilihan tidak ada");
+                    border();
             }
         } while (pilih != 2);
         sc.close();
     }
 
     private static void cekPalindrom() {
+        cls();
         cStack stack = new cStack();
-        int jumlahKata;
+        cStack reverseStack = new cStack();
+
+        int jumlahKata = 0;
         Boolean palindrom = false;
+
         border();
-        System.out.print("Masukkan kata : ");
+        System.out.print("Masukkan Kata : ");
         String kata = sc.next();
         jumlahKata = kata.length();
-        String[] splitKata = kata.split("");
-        for (String huruf : splitKata) {
-            cItem baru = new cItem(huruf);
-            stack.push(baru);
-        }
+
         for (int i = 0; i < jumlahKata; i++) {
-            String hasilPop = stack.pop();
-            if (splitKata[i].equalsIgnoreCase(hasilPop)) {
-                System.out.println("Huruf [" + splitKata[i] + "] sama dengan hasil pop [" + hasilPop + "]");
+            stack.push(new cItem(kata.split("")[i]));
+        }
+
+        for (int i = jumlahKata - 1; i >= 0; i--) {
+            reverseStack.push(new cItem(kata.split("")[i]));
+        }
+
+        for (int i = 0; i < jumlahKata; i++) {
+            String popKata = stack.pop();
+            String popReverseKata = reverseStack.pop();
+            if (popKata.equalsIgnoreCase(popReverseKata)) {
                 palindrom = true;
             } else {
-                System.out.println("Huruf [" + splitKata[i] + "] tidak sama dengan hasil pop [" + hasilPop + "]");
                 palindrom = false;
                 break;
             }
         }
+
         border();
-        System.out.println("Palindrom = " + palindrom);
+        System.out.println("Kata [" + kata + "], palindrom = " + palindrom);
         border();
         System.out.println("1. Coba lagi");
         System.out.println("2. Keluar");
@@ -66,7 +78,9 @@ public class appPalindrom {
                 cekPalindrom();
                 break;
             case 2:
+                border();
                 System.out.println("Terima Kasih Telah Menggunakan Program ini!");
+                border();
                 System.exit(0);
                 break;
             default:
