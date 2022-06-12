@@ -2,13 +2,18 @@ package BP2.pkgTumpukan;
 
 import java.util.Scanner;
 
+import BP2.add;
+
 public class appTumpukan {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         cTumpukan stack = new cTumpukan();
         int pilih = 0;
         do {
-            System.out.println("\nMENU STACK");
+            add.cls();
+            add.border();
+            System.out.println("MENU STACK");
+            add.border();
             System.out.println("1. Push");
             System.out.println("2. Pop");
             System.out.println("3. Display");

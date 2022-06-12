@@ -1,5 +1,6 @@
 package BP2.pkgPalindrom;
 
+import BP2.add;
 import java.util.Scanner;
 
 public class appPalindrom {
@@ -8,10 +9,10 @@ public class appPalindrom {
 
     public static void main(String[] args) {
         do {
-            cls();
-            border();
+            add.cls();
+            add.border();
             System.out.println("MENU PENGECEKAN PALINDROM");
-            border();
+            add.border();
             System.out.println("1. Cek Palindrom");
             System.out.println("2. Keluar");
             System.out.print("Pilih : ");
@@ -21,28 +22,28 @@ public class appPalindrom {
                     cekPalindrom();
                     break;
                 case 2:
-                    border();
+                    add.border();
                     System.out.println("Terima Kasih Telah Menggunakan Program ini!");
-                    border();
+                    add.border();
                     System.exit(0);
                 default:
-                    border();
+                    add.border();
                     System.out.println("Pilihan tidak ada");
-                    border();
+                    add.border();
             }
         } while (pilih != 2);
         sc.close();
     }
 
     private static void cekPalindrom() {
-        cls();
+        add.cls();
         cStack stack = new cStack();
         cStack reverseStack = new cStack();
 
         int jumlahKata = 0;
         Boolean palindrom = false;
 
-        border();
+        add.border();
         System.out.print("Masukkan Kata : ");
         String kata = sc.next();
         jumlahKata = kata.length();
@@ -66,9 +67,9 @@ public class appPalindrom {
             }
         }
 
-        border();
+        add.border();
         System.out.println("Kata [" + kata + "], palindrom = " + palindrom);
-        border();
+        add.border();
         System.out.println("1. Coba lagi");
         System.out.println("2. Keluar");
         System.out.print("Pilih : ");
@@ -78,24 +79,14 @@ public class appPalindrom {
                 cekPalindrom();
                 break;
             case 2:
-                border();
+                add.border();
                 System.out.println("Terima Kasih Telah Menggunakan Program ini!");
-                border();
+                add.border();
                 System.exit(0);
                 break;
             default:
                 System.out.println("Pilihan tidak ada");
                 break;
         }
-    }
-
-    public static void cls() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-
-    public static void border() {
-        System.out.println("---------------------------------");
-
     }
 }

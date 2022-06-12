@@ -1,5 +1,6 @@
 package BP2.pkgLinkedList;
 
+import BP2.add;
 import java.util.Scanner;
 
 public class AppLinkedList {
@@ -13,7 +14,10 @@ public class AppLinkedList {
 
         int pilih = 0;
         do {
+            add.cls();
+            add.border();
             System.out.println("Aplikasi Linked List");
+            add.border();
             System.out.println("1. Tambah Depan");
             System.out.println("2. Hapuss depan");
             System.out.println("3. Lihat linkedlist");
