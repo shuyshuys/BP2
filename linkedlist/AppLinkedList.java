@@ -22,12 +22,17 @@ public class AppLinkedList {
             pilih = sc.nextInt();
             switch (pilih) {
                 case 1:
+                    System.out.println("Tambah Depan");
+                    System.out.print("1. Tambah tas\n2. Tambah sepatu\n3. Tambah sandal\nPilih: ");
                     int pilih2 = sc.nextInt();
                     if (pilih2 == 1) {
                         cSimpul b = new cSimpul(b1);
                         ll.tambahDepan(b);
                     } else if (pilih2 == 2) {
                         cSimpul b = new cSimpul(b2);
+                        ll.tambahDepan(b);
+                    } else if (pilih2 == 3) {
+                        cSimpul b = new cSimpul(b3);
                         ll.tambahDepan(b);
                     }
                     break;
@@ -37,6 +42,8 @@ public class AppLinkedList {
                 case 3:
                     ll.lihatLinkedList();
                     break;
+                case 4:
+                System.out.println("Exit");
             }
         } while (pilih != 4);
         sc.close();
