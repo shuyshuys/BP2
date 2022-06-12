@@ -1,4 +1,4 @@
-package BP2;
+package linkedlist;
 
 import java.util.Scanner;
 
@@ -43,7 +43,7 @@ public class AppLinkedList {
                     ll.lihatLinkedList();
                     break;
                 case 4:
-                System.out.println("Exit");
+                    System.out.println("Exit");
             }
         } while (pilih != 4);
         sc.close();

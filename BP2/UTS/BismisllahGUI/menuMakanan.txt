@@ -1,0 +1,29 @@
+Nasi Campur
+10000
+
+Nasi Pecel
+8000
+
+Nasi Goreng
+12000
+
+Nasi Krawu
+6000
+
+Nasi Kuning
+9000
+
+Sate Ayam
+16000
+
+Sate Kambing
+18000
+
+Soto Ayam
+13000
+
+Soto lamongan
+14000
+
+Soto Madura
+15000

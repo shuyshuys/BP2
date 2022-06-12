@@ -1,4 +1,4 @@
-package BP2;
+package linkedlist;
 
 public class cLinkedList {
     // single linked list
