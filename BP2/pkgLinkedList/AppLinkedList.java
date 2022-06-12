@@ -1,4 +1,4 @@
-package linkedlist;
+package BP2.pkgLinkedList;
 
 import java.util.Scanner;
 

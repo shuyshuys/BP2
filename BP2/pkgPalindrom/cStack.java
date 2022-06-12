@@ -1,4 +1,4 @@
-package pkgPalindrom;
+package BP2.pkgPalindrom;
 
 public class cStack {
     cItem head, tail;

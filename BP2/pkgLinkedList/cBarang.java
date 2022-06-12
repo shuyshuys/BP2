@@ -1,4 +1,4 @@
-package linkedlist;
+package BP2.pkgLinkedList;
 
 public class cBarang {
     private String nama;

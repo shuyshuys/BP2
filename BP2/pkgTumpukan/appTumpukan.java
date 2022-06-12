@@ -1,4 +1,4 @@
-package pkgTumpukan;
+package BP2.pkgTumpukan;
 
 import java.util.Scanner;
 

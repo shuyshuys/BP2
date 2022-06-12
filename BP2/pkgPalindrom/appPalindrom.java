@@ -1,4 +1,4 @@
-package pkgPalindrom;
+package BP2.pkgPalindrom;
 
 import java.util.Scanner;
 
